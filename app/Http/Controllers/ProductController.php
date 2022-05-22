@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     function index(){
-        return view('products');
+       $products= Product::all();
+
+        return view('products',['products'=>$products]);
     }
 }

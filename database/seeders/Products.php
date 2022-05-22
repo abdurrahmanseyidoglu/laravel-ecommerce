@@ -24,36 +24,51 @@ class Products extends Seeder
                 'description' => 'Smart phone from Apple',
                 'price' => 999,
                 'category' => 'mobile',
-                'images'=>"https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-family-select-2021?wid=940&hei=1112&fmt=jpeg&qlt=90&.v=1617135051000",
+                'images' => "https://productimages.hepsiburada.net/s/49/550/10986386784306.jpg/format:webp",
             ],
             [
                 'name' => 'Galaxy S22',
                 'description' => 'Smart phone from Samsung',
                 'price' => 1100,
                 'category' => 'mobile',
-                'images'=>"https://cdn.dsmcdn.com/ty348/product/media/images/20220304/16/62572857/403703180/1/1_org_zoom.jpg",
+                'images' => "https://productimages.hepsiburada.net/s/177/550/110000141598673.jpg/format:webp",
             ],
             [
                 'name' => 'M1 MacBook',
                 'description' => 'Laptop from Apple',
                 'price' => 1300,
                 'category' => 'laptop',
-                'images'=>"https://cdn.vatanbilgisayar.com/Upload/PRODUCT/apple/thumb/114746_large.jpg",
+                'images' => "https://productimages.hepsiburada.net/s/49/550/10983949860914.jpg/format:webp",
             ],
             [
                 'name' => 'Dell xps 13',
                 'description' => 'Laptop from Dell',
                 'price' => 600,
                 'category' => 'Laptop',
-                'images'=>"https://www.notebookcheck-tr.com/uploads/tx_nbc2/xps.jpg",
+                'images' => "https://productimages.hepsiburada.net/s/70/550/110000011321899.jpg/format:webp",
             ],
             [
-                'name' => 'Cannon EOS 3000D',
+                'name' => 'Cannon 3000D',
                 'description' => 'High resolution Camera',
                 'price' => 4000,
                 'category' => 'camera',
-                'images'=>"https://m.media-amazon.com/images/I/916GGqnsG+L._SL1500_.jpg",
+                'images' => "https://productimages.hepsiburada.net/s/19/550/9853227532338.jpg/format:webp",
             ],
+            [
+                'name' => 'MSI Optix',
+                'description' => '144Hz 1ms (HDMI+Display) Freesync Premium Full HD Monitor',
+                'price' => 2000,
+                'category' => 'Display',
+                'images' => "https://productimages.hepsiburada.net/s/118/550/110000067891416.jpg/format:webp",
+            ],
+            [
+                'name' => ' Saba SB50F352',
+                'description' => '127 4K Ultra HD Android LED TV',
+                'price' => 4000,
+                'category' => 'Display',
+                'images' => "https://productimages.hepsiburada.net/s/193/550/110000160062594.jpg/format:webp",
+            ],
+
         ]);
     }
 }

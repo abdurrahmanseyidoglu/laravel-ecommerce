@@ -16,9 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
-Route::get('/products', function () {
-    return view('products');
-});
+
+Route::get('products', [\App\Http\Controllers\ProductController::class, 'index']);
 
 Route::middleware([
     'auth:sanctum',

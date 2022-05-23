@@ -52,7 +52,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link waves-effect" href="/products">Products</a>
+                    <a class="nav-link waves-effect" href="products">Products</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link waves-effect"

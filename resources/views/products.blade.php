@@ -21,7 +21,7 @@
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             @foreach($products as $product)
                 <div class="col mb-5">
-                    <a href="detail/{{$product->id}} class="">
+                    <a href="detail/{{$product['id']}}">
                     <div class="card h-100">
                         <!-- Product image-->
                         <img class="card-img-top img-responsive" src={{$product->images}} alt="..."/>

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,11 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', [ProductController::class, 'index']);
+Route::get('detail/{id}', [ProductController::class, 'detail']);
 
-Route::get('products', [\App\Http\Controllers\ProductController::class, 'index']);
 
 Route::middleware([
     'auth:sanctum',

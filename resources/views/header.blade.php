@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+
+use App\Http\Controllers\ProductController;
+
+$cartItems = ProductController::cartItem() //using a function inside ProductController because I could not pass the value via return view
+
+?>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -9,6 +16,8 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         rel="stylesheet"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/css/toastr.css" rel="stylesheet"/>
+
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
@@ -56,10 +65,10 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link waves-effect"
-                       href="https://mdbootstrap.com/docs/jquery/getting-started/download/">About</a>
+                       href="/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link waves-effect" href="https://mdbootstrap.com/education/bootstrap/"
+                    <a class="nav-link waves-effect" href="/contact"
                     >Contact</a>
                 </li>
             </ul>
@@ -68,7 +77,7 @@
             <ul class="navbar-nav nav-flex-icons">
                 <li class="nav-item">
                     <a class="nav-link waves-effect">
-                        <span class="badge badge-danger z-depth-1 mr-1"> 1 </span>
+                        <span class="badge badge-danger z-depth-1 mr-1"> {{$cartItems}} </span>
                         <i class="fas fa-shopping-cart"></i>
                         <span class="clearfix d-none d-sm-inline-block"> Cart </span>
                     </a>
@@ -82,8 +91,26 @@
                     <a href="https://twitter.com/MDBootstrap" class="nav-link waves-effect">
                         <i class="fab fa-twitter"></i>
                     </a>
-                </li>
+                </li> @if(Auth::user())
 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{Auth::user()->name}}
+
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('profile.show') }}">Profile</a>
+                            <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
+
+                        </div>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect"
+                           href="/login">Login</a>
+                    </li>
+                @endif
             </ul>
 
         </div>
@@ -105,5 +132,25 @@
     type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
 ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/js/toastr.js"></script>
+<script>
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-bottom-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+</script>
 
 </html>

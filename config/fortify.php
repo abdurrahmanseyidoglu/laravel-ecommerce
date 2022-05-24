@@ -1,6 +1,5 @@
 <?php
 
-use App\Providers\RouteServiceProvider;
 use Laravel\Fortify\Features;
 
 return [
@@ -61,11 +60,11 @@ return [
     |
     */
 
-    'home' => RouteServiceProvider::HOME,
-//    'home' => function () {
-//        //if you want to go to a specific route
-//        return route('home');
-//    },
+//    'home' => RouteServiceProvider::HOME,
+    'home' => function () {
+        //if you want to go to a specific route
+        return route('products');
+    },
 
     /*
     |--------------------------------------------------------------------------

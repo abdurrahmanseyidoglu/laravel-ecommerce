@@ -30,7 +30,14 @@ class ProductController extends Controller
             $cart->user_id = auth()->id();
             $cart->product_id = $request->product_id;
             $cart->save();
+
             return redirect('products');
         } else return redirect('login');
+    }
+
+    static function cartItem() //using static
+    {
+        $userId = auth()->id();
+        return Cart::where('user_id', $userId)->count();
     }
 }

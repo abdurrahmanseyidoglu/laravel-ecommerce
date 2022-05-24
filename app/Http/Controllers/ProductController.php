@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -24,9 +25,12 @@ class ProductController extends Controller
 
     function addToCart(Request $request)
     {
-        if(Auth::user()){
-            return 'looged in';
-        }
-        else return redirect('login');
+        if (Auth::user()) {
+            $cart = new Cart;
+            $cart->user_id = auth()->id();
+            $cart->product_id = $request->product_id;
+            $cart->save();
+            return redirect('products');
+        } else return redirect('login');
     }
 }

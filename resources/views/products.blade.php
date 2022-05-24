@@ -22,30 +22,31 @@
             @foreach($products as $product)
                 <div class="col mb-5">
 
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <a href="detail/{{$product['id']}}">  <img class="card-img-top img-responsive" src={{$product->images}} alt="..."/></a>
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <a href="detail/{{$product['id']}}">   <h5 class="fw-bolder">{{$product->name}}</h5> </a>
-                                    <!-- Product price-->
-                                    {{$product->price}}$
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <form action="/add_to_cart" method="POST">
-                                    @csrf
-                                    <input name="product_id" type="hidden" value={{$product['id']}} >
-                                    <div class="text-center">
-                                        <input type="submit" class="btn btn-outline-dark mt-auto" value="Add to cart">
-
-                                    </div>
-                                </form>
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <a href="detail/{{$product['id']}}"> <img class="card-img-top img-responsive"
+                                                                  src={{$product->images}} alt="..."/></a>
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <a href="detail/{{$product['id']}}"><h5 class="fw-bolder">{{$product->name}}</h5></a>
+                                <!-- Product price-->
+                                {{$product->price}}$
                             </div>
                         </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <form action="/add_to_cart" method="POST">
+                                @csrf
+                                <input name="product_id" type="hidden" value={{$product['id']}} >
+                                <div class="text-center">
+                                    <input type="submit" class="btn btn-outline-dark mt-auto" value="Add to cart">
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 
                 </div>
             @endforeach

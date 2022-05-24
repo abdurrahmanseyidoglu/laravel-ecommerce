@@ -22,10 +22,11 @@
                             <p class="about">{{$product->description}}</p>
                             <form action="/add_to_cart" method="POST">
                                 @csrf
-                            <input name="product_id" type="hidden" value={{$product['id']}} >
-                            <div class="cart mt-4 align-items-center">
-                                <button type="submit" class="btn btn-danger text-uppercase mr-2 px-4">Add to cart</button>
-                            </div>
+                                <input name="product_id" type="hidden" value={{$product['id']}} >
+                                <div class="cart mt-4 align-items-center">
+                                    <button type="submit" class="btn btn-danger text-uppercase mr-2 px-4">Add to cart
+                                    </button>
+                                </div>
                             </form>
                         </div>
                     </div>

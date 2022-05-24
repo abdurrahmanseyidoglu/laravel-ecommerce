@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -18,9 +19,14 @@ class ProductController extends Controller
     {
         $products = Product::all();
         $product = Product::find($id);
-        return view('productDetail', ["product" => $product,'products' => $products]);
+        return view('productDetail', ["product" => $product, 'products' => $products]);
     }
-    function addToCart(Request $request){
-        return 'hi';
+
+    function addToCart(Request $request)
+    {
+        if(Auth::user()){
+            return 'looged in';
+        }
+        else return redirect('login');
     }
 }

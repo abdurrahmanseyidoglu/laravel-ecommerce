@@ -75,13 +75,7 @@ $cartItems = ProductController::cartItem() //using a function inside ProductCont
 
             <!-- Right -->
             <ul class="navbar-nav nav-flex-icons">
-                <li class="nav-item">
-                    <a class="nav-link waves-effect">
-                        <span class="badge badge-danger z-depth-1 mr-1"> {{$cartItems}} </span>
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="clearfix d-none d-sm-inline-block"> Cart </span>
-                    </a>
-                </li>
+
                 <li class="nav-item">
                     <a href="https://www.facebook.com/mdbootstrap" class="nav-link waves-effect">
                         <i class="fab fa-facebook-f"></i>
@@ -121,6 +115,13 @@ $cartItems = ProductController::cartItem() //using a function inside ProductCont
                            href="/login">Login</a>
                     </li>
                 @endif
+                <li class="nav-item">
+                    <a class="nav-link waves-effect" href="/cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge badge-danger z-depth-1 mr-1"> {{$cartItems}} </span>
+                    </a>
+                </li>
+
             </ul>
 
         </div>

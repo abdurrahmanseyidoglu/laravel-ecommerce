@@ -49,7 +49,7 @@ class ProductController extends Controller
         $items = DB::table('cart')
             ->join('products', 'cart.product_id', '=', 'products.id')
             ->where('cart.user_id', $userId)
-            ->select('products.*')
+            ->select('products.*','cart.id as cart_id')
             ->get();
         return view('cartItems', ['items' => $items]);
     }

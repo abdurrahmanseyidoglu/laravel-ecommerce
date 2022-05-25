@@ -40,11 +40,12 @@ $cartItems = ProductController::cartItem() //using a function inside ProductCont
 
                         <td class="actions" data-th="">
                             <div class="text-right">
-
+                            <a href="/remove_cart">
                                 <button class="btn btn-white border-secondary bg-white btn-md mb-2">
                                     <i class="fas fa-trash"></i>
                                 </button>
-                            </div>
+                            </a></div>
+
                         </td>
                     </tr>
                 @endforeach

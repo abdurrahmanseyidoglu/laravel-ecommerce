@@ -1,12 +1,12 @@
 @include('header')
 <section class=" mt-5 mb-5">
-    <div class="container py-5 h-100" >
+    <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-lg-8 col-xl-6">
-                <div class="card border-top border-bottom border-3" style="border-color: #f37a27 !important;">
+                <div class="card border-top border-bottom border-3" style="border-color: #34568B !important;">
                     <div class="card-body p-5">
 
-                        <p class="lead fw-bold mb-5" style="color: #f37a27;">Purchase Reciept</p>
+                        <p class="lead fw-bold mb-5" style="color: #34568B;">Purchase Reciept</p>
 
                         <div class="row">
                             <div class="col mb-3">
@@ -43,12 +43,12 @@
 
                         <div class="row my-4">
                             <div class="col-md-4">
-                                <p class=" mb-5 h2" style="color: #f37a27;">Total</p>
-                                <p class="lead fw-bold mb-0" style="color: #f37a27;">{{$total + ($total*8/100)}}$</p>
+                                <p class=" mb-1 h2" style="color: #34568B;">Total</p>
+                                <p class="mb-0  h2" style="color:#BC243C;">{{$total + ($total*8/100)}}$</p>
                             </div>
                         </div>
 
-                        <p class="lead fw-bold mb-4 pb-2" style="color: #f37a27;">Tracking Order</p>
+                        <p class="lead fw-bold mb-4 pb-2" style="color: #34568B;">Tracking Order</p>
 
                         <div class="row">
                             <div class="col-lg-12">
@@ -57,17 +57,17 @@
 
                                     <ul class="list-inline items d-flex justify-content-between">
                                         <li class="list-inline-item items-list">
-                                            <p class="py-1 px-2 rounded text-white" style="background-color: #f37a27;">
+                                            <p class="py-1 px-2 rounded text-white" style="background-color: #34568B;">
                                                 Ordered</p
-                                                class="py-1 px-2 rounded text-white" style="background-color: #f37a27;">
+                                                class="py-1 px-2 rounded text-white" style="background-color: #34568B;">
                                         </li>
                                         <li class="list-inline-item items-list">
-                                            <p class="py-1 px-2 rounded text-white" style="background-color: #f37a27;">
+                                            <p class="py-1 px-2 rounded text-white" style="background-color: #34568B;">
                                                 Shipped</p
-                                                class="py-1 px-2 rounded text-white" style="background-color: #f37a27;">
+                                                class="py-1 px-2 rounded text-white" style="background-color: #34568B;">
                                         </li>
                                         <li class="list-inline-item items-list">
-                                            <p class="py-1 px-2 rounded text-white" style="background-color: #f37a27;">
+                                            <p class="py-1 px-2 rounded text-white" style="background-color: #34568B;">
                                                 On the way
                                             </p>
                                         </li>
@@ -81,7 +81,7 @@
                             </div>
                         </div>
 
-                        <p class="mt-4 pt-2 mb-0">Want any help? <a href="contact" style="color: #f37a27;">Please
+                        <p class="mt-4 pt-2 mb-0">Want any help? <a href="contact" style="color: #34568B;">Please
                                 contact
                                 us</a></p>
 

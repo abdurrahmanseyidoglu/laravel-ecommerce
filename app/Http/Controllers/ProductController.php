@@ -79,5 +79,10 @@ class ProductController extends Controller
         return view('order', ['total' => $total]);
     }
 
+    function contact()
+    {
+        return view('contact');
+
+    }
 
 }

@@ -116,7 +116,7 @@ $cartItems = ProductController::cartItem() //using a function inside ProductCont
                     </li>
                 @endif
                 <li class="nav-item">
-                    <a class="nav-link waves-effect" href="/cart">
+                    <a class="nav-link waves-effect" href="/cart_items">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="badge badge-danger z-depth-1 mr-1"> {{$cartItems}} </span>
                     </a>

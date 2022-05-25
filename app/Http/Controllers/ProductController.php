@@ -19,9 +19,9 @@ class ProductController extends Controller
 
     function detail($id)
     {
-        $products = Product::all();
+//        $products = Product::all();
         $product = Product::find($id);
-        return view('productDetail', ["product" => $product, 'products' => $products]);
+        return view('productDetail', ["product" => $product]);//, 'products' => $products
     }
 
     function addToCart(Request $request)
@@ -49,8 +49,14 @@ class ProductController extends Controller
         $items = DB::table('cart')
             ->join('products', 'cart.product_id', '=', 'products.id')
             ->where('cart.user_id', $userId)
-            ->select('products.*','cart.id as cart_id')
+            ->select('products.*', 'cart.id as cart_id')
             ->get();
         return view('cartItems', ['items' => $items]);
+    }
+
+    function removeItem($id)
+    {
+        Cart::destroy($id);
+        return redirect('cart_items');
     }
 }

@@ -53,17 +53,17 @@ $cartItems = ProductController::cartItem() //using a function inside ProductCont
 
                     </tbody>
                 </table>
-{{--                <div class="float-right text-right">--}}
+                <div class="float-right text-right">
 
-{{--                    <h4>{{$itemsSum}}</h4>--}}
-{{--                    <h1>$99.00</h1>--}}
-{{--                </div>--}}
+                    <h4>Total Price</h4>
+                    <h1>{{$total}}$</h1>
+                </div>
             </div>
         </div>
         <div class="row mt-4 d-flex align-items-center">
-{{--            <div class="col-sm-6 order-md-2 text-right">--}}
-{{--                <a href="catalog.html" class="btn btn-primary mb-4 btn-lg pl-5 pr-5">Checkout</a>--}}
-{{--            </div>--}}
+            <div class="col-sm-6 order-md-2 text-right">
+                <a href="catalog.html" class="btn btn-primary mb-4 btn-lg pl-5 pr-5">Order Now</a>
+            </div>
             <div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
                 <a href="products">
                     <i class="fas fa-arrow-left mr-2"></i> Continue Shopping</a>

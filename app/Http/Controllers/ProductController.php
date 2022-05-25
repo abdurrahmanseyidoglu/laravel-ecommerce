@@ -44,6 +44,7 @@ class ProductController extends Controller
 
     function cartItems()
     {
+        //get cart Items
         $userId = auth()->id();
 //        DB facade provides methods for each type of query: select, update, insert, delete, and statement.
         $items = DB::table('cart')
@@ -51,10 +52,26 @@ class ProductController extends Controller
             ->where('cart.user_id', $userId)
             ->select('products.*', 'cart.id as cart_id')
             ->get();
-        return view('cartItems', ['items' => $items]);
+
+        //get cart items price
+        $total = DB::table('cart')
+            ->join('products', 'cart.product_id', '=', 'products.id')
+            ->where('cart.user_id', $userId)
+            ->sum('products.price');
+        return view('cartItems', ['total' => $total, 'items' => $items]);
+
     }
 
-
+//    function totalPrice()
+//    {
+//        $userId = auth()->id();
+////        DB facade provides methods for each type of query: select, update, insert, delete, and statement.
+//        $total = DB::table('cart')
+//            ->join('products', 'cart.product_id', '=', 'products.id')
+//            ->where('cart.user_id', $userId)
+//            ->sum('products.price');
+//        return view('cartItems', ['total' => $total]);
+//    }
 
     function removeItem($id)
     {

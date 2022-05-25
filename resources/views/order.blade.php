@@ -1,6 +1,6 @@
 @include('header')
-<section class="h-100 h-custom mt-5">
-    <div class="container py-5 h-100">
+<section class=" mt-5 mb-5">
+    <div class="container py-5 h-100" >
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-lg-8 col-xl-6">
                 <div class="card border-top border-bottom border-3" style="border-color: #f37a27 !important;">

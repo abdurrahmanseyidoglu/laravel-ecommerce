@@ -1,5 +1,5 @@
 @include('header')
-<section class="h-100 h-custom" style="background-color: #eee;">
+<section class="h-100 h-custom mt-5" >
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-lg-8 col-xl-6">
@@ -14,8 +14,8 @@
                                 <p>10 April 2021</p>
                             </div>
                             <div class="col mb-3">
-                                <p class="small text-muted mb-1">Order No.</p>
-                                <p>{{$total}}</p>
+                                <p class="small text-muted mb-1">Price</p>
+                                <p>012j1gvs356c</p>
                             </div>
                         </div>
 
@@ -53,18 +53,15 @@
 
                                     <ul class="list-inline items d-flex justify-content-between">
                                         <li class="list-inline-item items-list">
-                                            <p class="py-1 px-2 rounded text-white" style="background-color: #f37a27;">
-                                                Ordered</p
+                                            <p class="py-1 px-2 rounded text-white" style="background-color: #f37a27;">Ordered</p
                                                 class="py-1 px-2 rounded text-white" style="background-color: #f37a27;">
                                         </li>
                                         <li class="list-inline-item items-list">
-                                            <p class="py-1 px-2 rounded text-white" style="background-color: #f37a27;">
-                                                Shipped</p
+                                            <p class="py-1 px-2 rounded text-white" style="background-color: #f37a27;">Shipped</p
                                                 class="py-1 px-2 rounded text-white" style="background-color: #f37a27;">
                                         </li>
                                         <li class="list-inline-item items-list">
-                                            <p class="py-1 px-2 rounded text-white" style="background-color: #f37a27;">
-                                                On the way
+                                            <p class="py-1 px-2 rounded text-white" style="background-color: #f37a27;">On the way
                                             </p>
                                         </li>
                                         <li class="list-inline-item items-list text-end" style="margin-right: 8px;">

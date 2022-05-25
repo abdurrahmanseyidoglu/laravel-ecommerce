@@ -84,5 +84,10 @@ class ProductController extends Controller
         return view('contact');
 
     }
+    function about()
+    {
+        return view('about');
+
+    }
 
 }

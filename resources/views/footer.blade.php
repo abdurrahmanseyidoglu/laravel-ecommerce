@@ -3,20 +3,14 @@
     <div class="container p-4 pb-0">
         <!-- Section: Social media -->
         <section class="mb-4">
-            <!-- Facebook -->
-            <a
-                class="btn btn-primary btn-floating m-1"
-                style="background-color: #3b5998;"
-                href="#!"
-                role="button"
-            ><i class="fab fa-facebook-f"></i
-                ></a>
+
+
 
             <!-- Twitter -->
             <a
                 class="btn btn-primary btn-floating m-1"
                 style="background-color: #55acee;"
-                href="#!"
+                href="https://twitter.com/llseyidoglu"
                 role="button"
             ><i class="fab fa-twitter"></i
                 ></a>
@@ -26,7 +20,7 @@
             <a
                 class="btn btn-primary btn-floating m-1"
                 style="background-color: #333333;"
-                href="#!"
+                href="https://github.com/abdurrahmanseyidoglu"
                 role="button"
             ><i class="fab fa-github"></i
                 ></a>

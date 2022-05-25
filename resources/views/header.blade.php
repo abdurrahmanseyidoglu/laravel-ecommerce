@@ -79,12 +79,12 @@ $cartItems = ProductController::cartItem() //using a function inside ProductCont
             <ul class="navbar-nav nav-flex-icons">
 
                 <li class="nav-item">
-                    <a href="https://www.facebook.com/mdbootstrap" class="nav-link waves-effect">
-                        <i class="fab fa-facebook-f"></i>
+                    <a href="https://github.com/abdurrahmanseyidoglu" class="nav-link waves-effect">
+                        <i class="fab fa-github"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://twitter.com/MDBootstrap" class="nav-link waves-effect">
+                    <a href="https://twitter.com/llseyidoglu" class="nav-link waves-effect">
                         <i class="fab fa-twitter"></i>
                     </a>
                 </li> @if(Auth::user())

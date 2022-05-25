@@ -54,6 +54,8 @@ class ProductController extends Controller
         return view('cartItems', ['items' => $items]);
     }
 
+
+
     function removeItem($id)
     {
         Cart::destroy($id);

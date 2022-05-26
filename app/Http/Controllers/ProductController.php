@@ -118,7 +118,7 @@ class ProductController extends Controller
             $order->address = $request->address;
             $order->save();
             //Remove the items from cart after adding them to the order table
-
+            Cart::where('user_id',$userId)->delete();
         }
         return $items;
     }

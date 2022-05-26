@@ -42,6 +42,7 @@
                                 <input name="product_id" type="hidden" value={{$product['id']}} >
                                 <div class="text-center">
                                     <input type="submit" class="btn btn-outline-dark mt-auto" value="Add to cart">
+                                    
 
                                 </div>
                             </form>

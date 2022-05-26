@@ -44,7 +44,10 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <input type="submit" name="submit" value="submit"
+                        <script>const sendContact=()=>{
+                                toastr.success('Are you the 6 fingered man?')
+                            }</script>
+                        <input type="submit" name="submit" value="submit" onclick="sendContact()"
                                class="btn btn-info btn-block rounded-2 py-2">
                     </div>
 

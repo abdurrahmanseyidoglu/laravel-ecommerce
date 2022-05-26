@@ -13,8 +13,12 @@ class ProductController extends Controller
     function index()
     {
         $products = Product::all();
-
-        return view('products', ['products' => $products]);
+        if (Auth::user()) {
+            $loggedIn = true;
+        } else {
+            $loggedIn = false;
+        }
+        return view('products', ['products' => $products, 'loggedIn' => $loggedIn]);
     }
 
     function detail($id)
@@ -27,13 +31,18 @@ class ProductController extends Controller
     function addToCart(Request $request)
     {
         if (Auth::user()) {
+
             $cart = new Cart;
             $cart->user_id = auth()->id();
             $cart->product_id = $request->product_id;
             $cart->save();
 
+
             return redirect('products');
-        } else return redirect('login');
+        } else {
+            $loggedIn = false;
+            return redirect('login');
+        }
     }
 
     static function cartItem() //using static
@@ -66,6 +75,7 @@ class ProductController extends Controller
     function removeItem($id)
     {
         Cart::destroy($id);
+        sleep(1);
         return redirect('cart_items');
     }
 
@@ -84,6 +94,7 @@ class ProductController extends Controller
         return view('contact');
 
     }
+
     function about()
     {
         return view('about');

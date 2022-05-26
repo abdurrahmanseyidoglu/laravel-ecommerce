@@ -82,30 +82,34 @@
                         </div>
 
 
-                        <form>
+                        <form action="/make_order" method="POST">
+                            @csrf
                             <div class="form-group row">
                                 <label class="col-4">Payment Method</label>
                                 <div class="col-8">
+
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input name="radio" id="radio_0" type="radio" class="custom-control-input"
-                                               value="cash">
+                                        <input name="payment_method" id="radio_0" type="radio" class="custom-control-input"
+                                               value="Cash" checked>
                                         <label for="radio_0" class="custom-control-label">Cash</label>
                                     </div>
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input name="radio" id="radio_1" type="radio" class="custom-control-input"
-                                               value="credit_cart">
+                                        <input name="payment_method" id="radio_1" type="radio" class="custom-control-input"
+                                               value="Credit Cart">
                                         <label for="radio_1" class="custom-control-label">Credit Card</label>
                                     </div>
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input name="radio" id="radio_2" type="radio" required
+                                        <input name="payment_method" id="radio_2" type="radio"
                                                class="custom-control-input"
-                                               value="visa">
+                                               value="Visa">
                                         <label for="radio_2" class="custom-control-label">Visa</label>
+
                                     </div>
+
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="address" class="col-4 col-form-label">Address</label>
+                                <label for="address" class="col-4 ">Address</label>
                                 <div class="col-8">
                                     <textarea required id="address" name="address" cols="40" rows="5"
                                               class="form-control"

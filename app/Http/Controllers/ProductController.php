@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -99,6 +100,27 @@ class ProductController extends Controller
     {
         return view('about');
 
+    }
+
+    function makeOrder(Request $request)
+    {
+        $userId = auth()->id();
+        //get Cart items of logged in user
+        $items = Cart::where('user_id', $userId)->get();
+        //add order info to the database
+        foreach ($items as $item) {
+            $order = new Order;
+            $order->product_id = $item['product_id'];
+            $order->user_id = $item['user_id'];
+            //order status should be dynamic but I set it here as 'pending' by default
+            $order->status = 'pending';
+            $order->payment_method = $request->payment_method;
+            $order->address = $request->address;
+            $order->save();
+            //Remove the items from cart after adding them to the order table
+
+        }
+        return $items;
     }
 
 }

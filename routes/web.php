@@ -33,3 +33,5 @@ Route::get('/remove_item/{id}', [ProductController::class, 'removeItem']);
 Route::get('/order', [ProductController::class, 'order']);
 Route::get('/contact', [ProductController::class, 'contact']);
 Route::get('/about', [ProductController::class, 'about']);
+Route::post('/make_order', [ProductController::class, 'makeOrder']);
+

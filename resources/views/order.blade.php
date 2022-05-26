@@ -81,16 +81,57 @@
                             </div>
                         </div>
 
+
+                        <form>
+                            <div class="form-group row">
+                                <label class="col-4">Payment Method</label>
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="radio" id="radio_0" type="radio" class="custom-control-input"
+                                               value="cash">
+                                        <label for="radio_0" class="custom-control-label">Cash</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="radio" id="radio_1" type="radio" class="custom-control-input"
+                                               value="credit_cart">
+                                        <label for="radio_1" class="custom-control-label">Credit Card</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input name="radio" id="radio_2" type="radio" required
+                                               class="custom-control-input"
+                                               value="visa">
+                                        <label for="radio_2" class="custom-control-label">Visa</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="address" class="col-4 col-form-label">Address</label>
+                                <div class="col-8">
+                                    <textarea required id="address" name="address" cols="40" rows="5"
+                                              class="form-control"
+                                              aria-describedby="addressHelpBlock"></textarea>
+                                    <span id="addressHelpBlock" class="form-text text-muted">Like this : Country-City-Street-Building-Apartment</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mt-5">
+                                    <input type="submit" value="Order Now"
+                                           class="btn btn-primary mb-4 btn-lg pl-5 pr-5">
+                                </div>
+                            </div>
+                        </form>
                         <p class="mt-4 pt-2 mb-0">Want any help? <a href="contact" style="color: #34568B;">Please
                                 contact
                                 us</a></p>
-
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
+
 </section>
+
 <style>
     @media (min-width: 1025px) {
         .h-custom {

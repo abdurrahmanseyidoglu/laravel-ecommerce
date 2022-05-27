@@ -69,13 +69,11 @@
                     <h5 class="mb-0">Abdurrahman Seyidoğlu</h5><span
                         class="small text-uppercase text-muted">CEO - Founder</span>
                     <ul class="social mb-0 list-inline mt-3">
-                        <li class="list-inline-item"><a href="#" class="social-link"><i
-                                    class="fa fa-facebook-f"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
+
+                        <li class="list-inline-item"><a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
                         </li>
-                        <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
-                        </li>
-                        <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+
+                        <li class="list-inline-item"><a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
                         </li>
                     </ul>
                 </div>

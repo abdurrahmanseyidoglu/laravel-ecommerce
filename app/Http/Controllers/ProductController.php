@@ -22,13 +22,14 @@ class ProductController extends Controller
         return view('products', ['products' => $products, 'loggedIn' => $loggedIn]);
     }
 
+//    Get item detail from DB
     function detail($id)
     {
-//        $products = Product::all();
         $product = Product::find($id);
         return view('productDetail', ["product" => $product]);//, 'products' => $products
     }
 
+//    Adding a product to Cart
     function addToCart(Request $request)
     {
         if (Auth::user()) {
@@ -41,11 +42,11 @@ class ProductController extends Controller
 
             return redirect('products');
         } else {
-            $loggedIn = false;
             return redirect('login');
         }
     }
 
+//        Getting the amount of items in Cart table
     static function cartItem() //using static
     {
         $userId = auth()->id();
@@ -60,6 +61,7 @@ class ProductController extends Controller
         $items = DB::table('cart')
             ->join('products', 'cart.product_id', '=', 'products.id')
             ->where('cart.user_id', $userId)
+            //We send all product information(name,images... that satisfy our conditions) also we send the cart_id,We are going to need it when we want to remove an item from the cart we do this via the cart_id(the is of the row that has the item in the cart database)
             ->select('products.*', 'cart.id as cart_id')
             ->get();
 
@@ -126,11 +128,11 @@ class ProductController extends Controller
     function orderHistory()
     {
         $userId = auth()->id();
-       $orderHistory =  DB::table('orders')
+        $orderHistory = DB::table('orders')
             ->join('products', 'orders.product_id', '=', 'products.id')
             ->where('orders.user_id', $userId)
             ->get();
-        return view('orderHistory',['orderHistory'=>$orderHistory]);
+        return view('orderHistory', ['orderHistory' => $orderHistory]);
     }
 
 }

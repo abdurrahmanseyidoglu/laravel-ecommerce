@@ -118,9 +118,19 @@ class ProductController extends Controller
             $order->address = $request->address;
             $order->save();
             //Remove the items from cart after adding them to the order table
-            Cart::where('user_id',$userId)->delete();
+            Cart::where('user_id', $userId)->delete();
         }
         return redirect('/cart');
+    }
+
+    function orderHistory()
+    {
+        $userId = auth()->id();
+       $orderHistory =  DB::table('orders')
+            ->join('products', 'orders.product_id', '=', 'products.id')
+            ->where('orders.user_id', $userId)
+            ->get();
+        return view('orderHistory',['orderHistory'=>$orderHistory]);
     }
 
 }

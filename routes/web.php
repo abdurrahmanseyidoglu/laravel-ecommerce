@@ -34,4 +34,6 @@ Route::get('/order', [ProductController::class, 'order']);
 Route::get('/contact', [ProductController::class, 'contact']);
 Route::get('/about', [ProductController::class, 'about']);
 Route::post('/make_order', [ProductController::class, 'makeOrder']);
+Route::get('/order_history', [ProductController::class, 'orderHistory']);
+
 

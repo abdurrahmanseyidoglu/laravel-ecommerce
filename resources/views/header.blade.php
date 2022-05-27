@@ -63,11 +63,7 @@ $cartItems = ProductController::cartItem() //using a function inside ProductCont
 
             <!-- Left -->
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link waves-effect" href="/">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link waves-effect" href="products">Products</a>
                 </li>
@@ -79,6 +75,11 @@ $cartItems = ProductController::cartItem() //using a function inside ProductCont
                     <a class="nav-link waves-effect" href="/contact"
                     >Contact</a>
                 </li>
+                @if(Auth::user())
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect" href="/order_history">My Orders</a>
+                    </li>
+                    @endif
             </ul>
 
             <!-- Right -->

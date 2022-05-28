@@ -119,8 +119,8 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6 mt-5">
-                                    <a href="/products" value="Order Now"
-                                           class="btn btn-primary mb-4 btn-lg pl-5 pr-5">
+                                    <input type="submit" value="Order Now"
+                                       class="btn btn-primary mb-4 btn-lg pl-5 pr-5">
                                 </div>
                             </div>
                         </form>

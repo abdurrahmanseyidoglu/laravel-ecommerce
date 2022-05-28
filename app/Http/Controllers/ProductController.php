@@ -122,7 +122,7 @@ class ProductController extends Controller
             //Remove the items from cart after adding them to the order table
             Cart::where('user_id', $userId)->delete();
         }
-        return redirect('/cart');
+        return redirect('/cart_items');
     }
 
     function orderHistory()

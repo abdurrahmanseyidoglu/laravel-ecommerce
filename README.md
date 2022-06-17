@@ -1,17 +1,17 @@
 # Laravel E-commerce 
 
 
- ## Features
+## Features
 
-- User login sign-up and profile settings
+- User login signup and profile settings
 - Adding products to card for future purchases
 - Check in page for taxes and total price 
-- Order history page for previous orders
-- Nice and minimalistic design using bootstrap 
+- Order history page for previous prders
+- Nice and minimilistic desgin using bootstrap 
 
 
 ## How To Run
-1) Clone the repository ```git clone https://github.com/abdurrahmanseyidoglu/laravel-ecommerce.git```
+1) Clone the repositry ```git clone https://github.com/abdurrahmanseyidoglu/laravel-ecommerce.git```
 2) go to the project directory ```cd laravel-ecommerce```
 3) Run ```composer install``` on your cmd or terminal
 4) Copy ```.env.example``` file to ```.env``` on the root folder
@@ -24,3 +24,4 @@
 ## License
 
 MIT
+

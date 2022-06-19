@@ -12,13 +12,13 @@
                             <div class="col mb-3">
                                 <p class="small text-muted mb-1">Date</p>
                                 <p>@php
-                                        $now = date('Y-m-d');
-                                         echo $now;
-                                    @endphp</p>
+                                    $now = date('Y-m-d');
+                                    echo $now;
+                                @endphp</p>
                             </div>
                             <div class="col mb-3">
                                 <p class="small text-muted mb-1">Items Price</p>
-                                <p class="h5">{{$total}}$</p>
+                                <p class="h5">{{ $total }}$</p>
                             </div>
                         </div>
 
@@ -28,7 +28,7 @@
                                     <p>Total of Items price</p>
                                 </div>
                                 <div class="col-md-4 col-lg-3">
-                                    <p class="h5">{{$total}}$</p>
+                                    <p class="h5">{{ $total }}$</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -36,7 +36,7 @@
                                     <p class="mb-0">Taxes (8%) </p>
                                 </div>
                                 <div class="col-md-4 col-lg-3">
-                                    <p class="mb-0">{{$total*8/100}}$</p>
+                                    <p class="mb-0">{{ ($total * 8) / 100 }}$</p>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                         <div class="row my-4">
                             <div class="col-md-4">
                                 <p class=" mb-1 h2" style="color: #34568B;">Total</p>
-                                <p class="mb-0  h2" style="color:#BC243C;">{{$total + ($total*8/100)}}$</p>
+                                <p class="mb-0  h2" style="color:#BC243C;">{{ $total + ($total * 8) / 100 }}$</p>
                             </div>
                         </div>
 
@@ -58,13 +58,13 @@
                                     <ul class="list-inline items d-flex justify-content-between">
                                         <li class="list-inline-item items-list">
                                             <p class="py-1 px-2 rounded text-white" style="background-color: #34568B;">
-                                                Ordered</p
-                                                class="py-1 px-2 rounded text-white" style="background-color: #34568B;">
+                                                Ordered</p class="py-1 px-2 rounded text-white"
+                                                style="background-color: #34568B;">
                                         </li>
                                         <li class="list-inline-item items-list">
                                             <p class="py-1 px-2 rounded text-white" style="background-color: #34568B;">
-                                                Shipped</p
-                                                class="py-1 px-2 rounded text-white" style="background-color: #34568B;">
+                                                Shipped</p class="py-1 px-2 rounded text-white"
+                                                style="background-color: #34568B;">
                                         </li>
                                         <li class="list-inline-item items-list">
                                             <p class="py-1 px-2 rounded text-white" style="background-color: #34568B;">
@@ -89,19 +89,18 @@
                                 <div class="col-8">
 
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input name="payment_method" id="radio_0" type="radio" class="custom-control-input"
-                                               value="Cash" checked>
+                                        <input name="payment_method" id="radio_0" type="radio"
+                                            class="custom-control-input" value="Cash" checked>
                                         <label for="radio_0" class="custom-control-label">Cash</label>
                                     </div>
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input name="payment_method" id="radio_1" type="radio" class="custom-control-input"
-                                               value="Credit Cart">
+                                        <input name="payment_method" id="radio_1" type="radio"
+                                            class="custom-control-input" value="Credit Cart">
                                         <label for="radio_1" class="custom-control-label">Credit Card</label>
                                     </div>
                                     <div class="custom-control custom-radio custom-control-inline">
                                         <input name="payment_method" id="radio_2" type="radio"
-                                               class="custom-control-input"
-                                               value="Visa">
+                                            class="custom-control-input" value="Visa">
                                         <label for="radio_2" class="custom-control-label">Visa</label>
 
                                     </div>
@@ -111,16 +110,16 @@
                             <div class="form-group row">
                                 <label for="address" class="col-4 ">Address</label>
                                 <div class="col-8">
-                                    <textarea required id="address" name="address" cols="40" rows="5"
-                                              class="form-control"
-                                              aria-describedby="addressHelpBlock"></textarea>
-                                    <span id="addressHelpBlock" class="form-text text-muted">Like this : Country-City-Street-Building-Apartment</span>
+                                    <textarea required id="address" name="address" cols="40" rows="5" class="form-control"
+                                        aria-describedby="addressHelpBlock"></textarea>
+                                    <span id="addressHelpBlock" class="form-text text-muted">Like this :
+                                        Country-City-Street-Building-Apartment</span>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6 mt-5">
                                     <input type="submit" value="Order Now"
-                                       class="btn btn-primary mb-4 btn-lg pl-5 pr-5">
+                                        class="btn btn-primary mb-4 btn-lg pl-5 pr-5">
                                 </div>
                             </div>
                         </form>

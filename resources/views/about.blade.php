@@ -12,7 +12,7 @@
 
         </div>
         <div class="col-lg-6 d-none d-lg-block"><img src="https://bootstrapious.com/i/snippets/sn-about/illus.png"
-                                                     alt="" class="img-fluid"></div>
+                alt="" class="img-fluid"></div>
     </div>
 </div>
 
@@ -30,12 +30,13 @@
                     we're able to turn our passion into our own website..</p>
             </div>
             <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img
-                    src="https://bootstrapious.com/i/snippets/sn-about/img-1.jpg" alt="" class="img-fluid mb-4 mb-lg-0">
+                    src="https://bootstrapious.com/i/snippets/sn-about/img-1.jpg" alt=""
+                    class="img-fluid mb-4 mb-lg-0">
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-lg-5 px-5 mx-auto"><img src="https://bootstrapious.com/i/snippets/sn-about/img-2.jpg" alt=""
-                                                    class="img-fluid mb-4 mb-lg-0"></div>
+            <div class="col-lg-5 px-5 mx-auto"><img src="https://bootstrapious.com/i/snippets/sn-about/img-2.jpg"
+                    alt="" class="img-fluid mb-4 mb-lg-0"></div>
             <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
                 <h2 class="font-weight-light">And Finally</h2>
                 <p class="font-italic text-muted mb-4">We hope you enjoy our products as much as we enjoy offering them
@@ -66,14 +67,16 @@
                 <div class="bg-white rounded shadow-sm py-5 px-4"><img
                         src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png" alt="" width="100"
                         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                    <h5 class="mb-0">Abdurrahman Seyidoğlu</h5><span
-                        class="small text-uppercase text-muted">CEO - Founder</span>
+                    <h5 class="mb-0">Abdurrahman Seyidoğlu</h5><span class="small text-uppercase text-muted">CEO -
+                        Founder</span>
                     <ul class="social mb-0 list-inline mt-3">
 
-                        <li class="list-inline-item"><a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                        <li class="list-inline-item"><a href="#" class="social-link"><i
+                                    class="fa-brands fa-twitter"></i></a>
                         </li>
 
-                        <li class="list-inline-item"><a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+                        <li class="list-inline-item"><a href="#" class="social-link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
                         </li>
                     </ul>
                 </div>

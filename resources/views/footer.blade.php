@@ -7,23 +7,13 @@
 
 
             <!-- Twitter -->
-            <a
-                class="btn btn-primary btn-floating m-1"
-                style="background-color: #55acee;"
-                href="https://twitter.com/llseyidoglu"
-                role="button"
-            ><i class="fab fa-twitter"></i
-                ></a>
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee;"
+                href="https://twitter.com/llseyidoglu" role="button"><i class="fab fa-twitter"></i></a>
 
 
             <!-- Github -->
-            <a
-                class="btn btn-primary btn-floating m-1"
-                style="background-color: #333333;"
-                href="https://github.com/abdurrahmanseyidoglu"
-                role="button"
-            ><i class="fab fa-github"></i
-                ></a>
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;"
+                href="https://github.com/abdurrahmanseyidoglu" role="button"><i class="fab fa-github"></i></a>
         </section>
         <!-- Section: Social media -->
     </div>
